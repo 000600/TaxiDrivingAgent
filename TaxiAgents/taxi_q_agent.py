@@ -34,8 +34,7 @@ for epoch in range(1, epochs):
     done = False # Loop condition
 
     print(f"\nEpoch {epoch}")
-    print("----------------------------------------------------------------------------------")
-
+    
     while done == False:
         # Choose action 
         if random.uniform (0, 1) < epsilon:
@@ -43,7 +42,7 @@ for epoch in range(1, epochs):
         else:
             action = np.argmax(q_table[state]) # If the random number is more than the epsilon, choose a learned action
 
-        next_state, reward, done, info = env.step(action)
+        next_state, reward, done, info = env.step(action) # Get new state-reward pair
 
         # Collect values for updates
         old_val = q_table[state, action]
@@ -130,6 +129,7 @@ while done == False:
     state, reward, done, info = env.step(action) # Take action
     time.sleep(0.1)
 
+# Visualize training progress
 plt.plot(train_steps, label = "Training Steps")
 plt.plot(train_penalties, label = "Training Penalties")
 plt.xlabel("Epochs")
