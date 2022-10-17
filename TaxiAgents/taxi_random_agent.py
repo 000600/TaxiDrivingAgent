@@ -7,8 +7,8 @@ import time
 env = gym.make("Taxi-v3").env
 obs = env.reset()
 
-# Encode state
-state = env.encode(3, 1, 2, 0)
+# Encode state (to start from a random state, replace lines 11 and 12 with 'state = env.reset()')
+state = env.encode(3, 1, 2, 0) 
 env.s = state
 
 # Set base variables
@@ -20,7 +20,7 @@ done = False # Loop condition
 while done == False:
     # Take an action
     action = env.action_space.sample() # Select random action
-    state, reward, done, info = env.step(action) # take that action
+    state, reward, done, info = env.step(action) # Take that action
 
     # Update rewards and penalties
     if reward == -10:
