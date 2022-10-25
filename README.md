@@ -14,7 +14,7 @@ The model found in the **cliff_qagent.py** file is a basic Q-Learning algorithm,
 - An epsilon value of 0.4
 - An epsilon decay rate of 0.999
 - A minimum epsilon of 0.1
-- 300 epochs
+- 25000 epochs
 
 Feel free to build or improve upon the model or its hyperparameters!
 
