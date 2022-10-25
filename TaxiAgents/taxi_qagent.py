@@ -14,7 +14,7 @@ q_table = np.zeros([env.observation_space.n, env.action_space.n]) # All possible
 
 # Initialize hyperparameters
 alpha = 0.1 # Learning rate
-gamma = 0.6 # Value placed on future Rewards
+gamma = 0.6 # Value placed on future rewards
 epsilon = 0.1 # Exploration and exploitation tradeoff
 epsilon_minimum = 0.01
 epochs = 25000
